@@ -11,4 +11,4 @@
 <p>phpunit --colors=always exo1/SessionManagerTest*.php</p>
 
 <h2>Tous les Tests</h2>
-<p>phpunit --colors=always exo1/UserProviderTest.php</p>
+<p>phpunit --colors=always .</p>
