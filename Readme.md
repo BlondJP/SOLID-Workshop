@@ -2,7 +2,7 @@
 
 <h2>But du Workshop</h2>
 <p>Le but de ce workshop est de guider les participants vers l'implémentation de SOLID. Pour cela ils devront valider des tests unitaires pré-écrits.</p>
-<p>Démarche : lire les tests unitaires de chaque exercice. Puis Ecrire les classes necessaires pour le valider.</p>
+<p>Démarche : lire les tests unitaires de chaque exercice. Puis Ecrire les classes necessaires pour les valider.</p>
 
 <h2>Pour lancer les Tests unitaires</h2>
 <p>phpunit --colors=always exo0/TestApple.php</p>
