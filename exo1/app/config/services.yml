@@ -37,3 +37,13 @@ services:
 # explicitly configure the service
     AppBundle\Service\CsvParser:
         public: true
+
+    AppBundle\Service\ShellLogger:
+        public: true
+        arguments:
+            $logger: '@logger'
+
+    AppBundle\Service\ImportService:
+        public: true
+        arguments:
+            $parser: '@AppBundle\Service\CsvParser'

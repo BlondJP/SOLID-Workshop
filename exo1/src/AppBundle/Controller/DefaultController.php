@@ -6,6 +6,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Service\CsvParser;
+use AppBundle\Service\ImportService;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DefaultController extends Controller
@@ -28,6 +29,17 @@ class DefaultController extends Controller
     {
         $csvParser = $this->container->get(CsvParser::class);
         $data = $csvParser->parse(); 
+
+        return new JsonResponse($data);
+    }
+
+    /**
+     * @Route("/import", name="import")
+     */
+    public function importAction(Request $request)
+    {
+        $importService = $this->container->get(ImportService::class);
+        $data = $importService->import();
 
         return new JsonResponse($data);
     }
