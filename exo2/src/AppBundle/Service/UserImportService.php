@@ -35,6 +35,9 @@ class UserImportService implements ImportInterface
      */
     public function import(String $filePath) : int
     {
-        return count([]);
+        $users = $this->parser->parse($filePath);
+        $importedUserNumber = $this->gateway->insert($users);
+
+        return $importedUserNumber;
     }
 }

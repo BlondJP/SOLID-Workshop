@@ -41,13 +41,26 @@ services:
         public: true
 
     AppBundle\Service\MysqlGateway:
+        autowire: false
         public: true
+        arguments: [ "@doctrine.orm.entity_manager" ]
+        #arguments:
+         #   em: '@doctrine.orm.entity_manager'
+        #['@doctrine.orm.entity_manager']
+        #arguments:
+        #    $em: Doctrine\ORM\EntityManager
+
+    Symfony\Component\Console\Output\BufferedOutput:
+        public: true
+
+    Doctrine\ORM\EntityManager:
+        public: true;
 
     AppBundle\Service\UserImportService:
         public: true
         arguments:
             $parser: '@AppBundle\Service\CsvParser'
-            $outputter: 'Symfony\Component\Console\Output'
+            $outputter: '@Symfony\Component\Console\Output\BufferedOutput'
             $gateway: '@AppBundle\Service\MysqlGateway'
 
     AppBundle\Command\UserImportCommand:
