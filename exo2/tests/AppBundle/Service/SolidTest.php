@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\AppBundle\Service;
+/*namespace Tests\AppBundle\Service;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use AppBundle\Service\CsvParser;
@@ -27,4 +27,4 @@ class SolidTest extends WebTestCase
         $data = $parser->parse();
         $this->assertInternalType('array',$data);
     }
-}
+}*/
