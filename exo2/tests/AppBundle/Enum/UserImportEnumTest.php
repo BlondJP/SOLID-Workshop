@@ -19,6 +19,5 @@ class UserImportEnumTest extends WebTestCase
         $this->assertEquals(UserImportEnum::PRENOM, 2);
         $this->assertEquals(UserImportEnum::REGION, 3);
         $this->assertEquals(UserImportEnum::EMAIL, 4);
-
     }
 }

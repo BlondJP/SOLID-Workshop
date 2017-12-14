@@ -3,7 +3,6 @@
 namespace AppBundle\Command;
 
 use AppBundle\Service\UserImportService;
-use Symfony\Component\Console\Command\Command;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 
 

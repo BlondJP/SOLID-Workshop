@@ -6,9 +6,14 @@
 
 <h2>Pour lancer les Tests unitaires</h2>
 <ul>
-    <li>1) phpunit --colors=always tests/AppBundle/Command</li>
+    <li>1) phpunit --colors=always tests/AppBundle/Enum</li>
     <li>2) phpunit --colors=always tests/AppBundle/Command</li>
-    <li>1) phpunit --colors=always tests/AppBundle/Command</li>
-    <li>1) phpunit --colors=always tests/AppBundle/Command</li>
+    <li>3) phpunit --colors=always tests/AppBundle/Service</li>
+    <li>4) phpunit --colors=always tests/</li>
+</ul>
 
-</ul> 
+<h2>Une fois les test au vert, lancer l'import</h2>
+<ul>
+    <li>1) soyez sur que user.csv est dans le dossier exo2/</li>
+    <li>2) php bin/console solid:import-user</li>
+</ul>
