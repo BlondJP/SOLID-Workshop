@@ -29,8 +29,6 @@ class UserImportCommand extends ContainerAwareCommand
 
         $number = $userImportService->import($filePath);
 
-
-        $output->write("I am SOLID \n");
-        //$output->write("And I'll import some user\n");
+        $output->write("$number users have been found in the file.\n");
     }
 }

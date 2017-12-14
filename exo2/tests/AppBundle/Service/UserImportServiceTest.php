@@ -3,12 +3,12 @@
 namespace Tests\AppBundle\Service;
 
 // to extend
+use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 // To inject
 use AppBundle\Service\CsvParser;
 use AppBundle\Service\MysqlGateway;
-use Symfony\Component\Console\Output\BufferedOutput;
 
 // to instanciate
 use AppBundle\Service\UserImportService;
@@ -21,7 +21,8 @@ class UserImportServiceTest extends WebTestCase
 
     public function setUp()
     {
-        $this->userImportService = new UserImportService(new CsvParser(), new BufferedOutput(), new MysqlGateway());
+        $fakeEntityManager = $this->createMock(EntityManager::class);
+        $this->userImportService = new UserImportService(new CsvParser(), new MysqlGateway($fakeEntityManager));
     }
 
     public function testInstanciation()
@@ -31,7 +32,8 @@ class UserImportServiceTest extends WebTestCase
 
     public function testImport()
     {
-        $usersImportedNumber = $this->userImportService->import('');
-        $this->assertEquals($usersImportedNumber, 0);
+        $usersImportedNumber = $this->userImportService->import('users.csv');
+        $expectedUsersImportedNumber = 4;
+        $this->assertEquals($usersImportedNumber, $expectedUsersImportedNumber);
     }
 }

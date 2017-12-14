@@ -16,13 +16,11 @@ interface ImportInterface
 class UserImportService implements ImportInterface
 {
     private $parser;
-    private $outputter;
     private $gateway;
 
-    public function __construct(ParserInterface $parser, OutputInterface $outputter, GatewayInterface $gateway)
+    public function __construct(ParserInterface $parser, GatewayInterface $gateway)
     {
         $this->parser = $parser;
-        $this->outputter = $outputter;
         $this->gateway = $gateway;
     }
 

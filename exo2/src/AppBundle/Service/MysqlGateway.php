@@ -3,7 +3,7 @@
 namespace AppBundle\Service;
 
 use AppBundle\Entity\User;
-use AppBundle\Repository\UserRepository;
+use AppBundle\Enum\UserImportEnum;
 use Doctrine\ORM\EntityManager;
 
 
@@ -25,21 +25,24 @@ class MysqlGateway implements GatewayInterface
     {
         foreach ($userslines as $line) {
             $user = $this->createUser($line);
-            $this->em->persist($user);
+            if ($user instanceof User) {
+                $this->em->persist($user);
+            }
         }
+        $this->em->flush();
 
-        return count($user);
+        return count($userslines);
     }
 
     private function createUser(array $line)
     {
         $user = new User();
 
-        $user->setUsername($line[0])
-            ->setNom($line[1])
-            ->setPrenom($line[2])
-            ->setRegion($line[3])
-            ->setEmail($line[4]);
+        $user->setUsername($line[UserImportEnum::USERNAME])
+            ->setNom($line[UserImportEnum::NOM])
+            ->setPrenom($line[UserImportEnum::PRENOM])
+            ->setRegion($line[UserImportEnum::REGION])
+            ->setEmail($line[UserImportEnum::EMAIL]);
 
         return $user;
     }
