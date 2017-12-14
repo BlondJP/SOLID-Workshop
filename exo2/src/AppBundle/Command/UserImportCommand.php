@@ -28,6 +28,6 @@ class UserImportCommand extends ContainerAwareCommand
 
         $number = $userImportService->import($filePath);
 
-        $output->write("$number users have been found in the file.\n");
+        $output->write("<info>$number users have been found in the file.\n</info>");
     }
 }

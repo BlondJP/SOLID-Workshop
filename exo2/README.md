@@ -12,7 +12,7 @@
     <li>4) phpunit --colors=always tests/</li>
 </ul>
 
-<h2>Une fois les test au vert, lancer l'import</h2>
+<h2>Une fois les tests au vert, lancer l'import</h2>
 <ul>
     <li>1) soyez sur que user.csv est dans le dossier exo2/</li>
     <li>2) php bin/console solid:import-user</li>
