@@ -33,7 +33,7 @@ class UserImportServiceTest extends WebTestCase
     public function testImport()
     {
         $usersImportedNumber = $this->userImportService->import('users.csv');
-        $expectedUsersImportedNumber = 4;
+        $expectedUsersImportedNumber = 3;
         $this->assertEquals($usersImportedNumber, $expectedUsersImportedNumber);
     }
 }
