@@ -5,7 +5,7 @@ namespace AppBundle\Service;
 interface ImportInterface
 {
     /**
-     * Importe les items trouvés dans le fichier
+     * Importe les items trouvés dans le fichier et retourne le nombre d'items inseres
      *
      * @param String $filePath
      * @return int
