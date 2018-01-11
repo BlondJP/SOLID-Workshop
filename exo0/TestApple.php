@@ -9,7 +9,6 @@ class TestApple extends TestCase
     {
         $apple = new Apple();
         $answer = isset($apple->isTasteGood);
-        //var_dump($apple->isTasteGood); die;
 
         $this->assertTrue($answer);
     }
