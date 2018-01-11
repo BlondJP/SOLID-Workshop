@@ -6,11 +6,11 @@
 
 <h2>Pour lancer les Tests unitaires</h2>
 <ul>
-    <li>1) phpunit --colors=always tests/AppBundle/Enum</li>
+    <li>1) phpunit --colors=always tests/AppBundle/Enum/UserImportEnumTest.php</li>
     <li>2) phpunit --colors=always tests/AppBundle/Service/CsvParserTest.php</li>
     <li>3) phpunit --colors=always tests/AppBundle/Service/MysqlGatewayTest.php</li>
     <li>4) phpunit --colors=always tests/AppBundle/Service/UserImportServiceTest.php</li>
-    <li>3) phpunit --colors=always tests/AppBundle/Command</li>
+    <li>4) phpunit --colors=always tests/AppBundle/Command/UserImportCommandTest.php</li>
     <li>5) phpunit --colors=always tests/</li>
 </ul>
 
