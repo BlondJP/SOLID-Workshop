@@ -7,7 +7,7 @@
 <h2>Pour lancer les Tests unitaires</h2>
 <p>phpunit --colors=always exo0/TestApple.php</p>
 
-<h2>Pou installer PHP 7.2 sur Mac</h2>
+<h2>Pour installer PHP 7.2 sur Mac</h2>
 <p>
 <ul>
     <li>curl -s http://php-osx.liip.ch/install.sh | bash -s 7.2</li>
@@ -17,7 +17,7 @@
 </ul>
 </p>
 
-<h2>Pou installer PHPUnit sur Mac</h2>
+<h2>Pour installer PHPUnit sur Mac</h2>
 <p>
 <ul>
     <li>curl https://phar.phpunit.de/phpunit-6.4.phar  -L -o phpunit.phar</li>
